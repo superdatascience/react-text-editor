@@ -35,7 +35,7 @@ import TextEditor from "react-text-editor";
 Then you can use the component anywhere in your React app like so:
 
 ```jsx
-	<TextEditor field="description" html={description} saveCallback={handleChange} placeholder="e.g. This is my editor..." enableEditor={true} />
+<TextEditor field="description" html={description} saveCallback={handleChange} placeholder="e.g. This is my editor..." enableEditor={true} />
 ```
 
 ## License
