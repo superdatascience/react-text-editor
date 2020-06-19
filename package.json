@@ -6,7 +6,11 @@
 	"scripts": {
 		"storybook": "start-storybook",
 		"build": "rollup -c",
-		"start": "rollup -c -w"
+		"start": "rollup -c -w",
+		"test": "echo 'There are no test configured'",
+		"patch": "npm --no-git-tag-version version patch",
+		"minor": "npm --no-git-tag-version version minor",
+		"major": "npm --no-git-tag-version version major"
 	},
 	"keywords": [
 		"react",
