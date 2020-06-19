@@ -4,6 +4,7 @@
 	"description": "Text editor",
 	"main": "dist/index.js",
 	"scripts": {
+		"storybook": "start-storybook",
 		"build": "rollup -c",
 		"start": "rollup -c -w"
 	},
@@ -24,6 +25,9 @@
 		"@rollup/plugin-babel": "^5.0.3",
 		"@rollup/plugin-commonjs": "^13.0.0",
 		"@rollup/plugin-node-resolve": "^8.0.1",
+		"@storybook/addon-actions": "^5.3.19",
+		"@storybook/react": "^5.3.19",
+		"babel-loader": "^8.1.0",
 		"react": "^16.13.1",
 		"react-dom": "^16.13.1",
 		"rollup": "^2.16.1",
