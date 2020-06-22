@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import ActionButton from './button.js';
 import { BoldIcon, ItalicIcon, UnderlineIcon, StrikethroughIcon, IconEdit, IconCode } from './icons.js';
-
+import './styles.css'
 const Editor = ({ field, html, saveCallback, placeholder }) => {
 	const [htmlEditor, setHtmlEditor] = useState(false);
 	const editorRef = useRef();
@@ -20,7 +20,7 @@ const Editor = ({ field, html, saveCallback, placeholder }) => {
 	}
 
 	return (
-		<div>
+		<div className="editor">
 			<ActionButton cmd="bold" icon={BoldIcon} />
 			<ActionButton cmd="italic" icon={ItalicIcon} />
 			<ActionButton cmd="underline" icon={UnderlineIcon} />
