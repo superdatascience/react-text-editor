@@ -21,5 +21,5 @@ export default {
 		commonjs(),
 		terser()
 	],
-	external: ['react', 'react-dom']
+	external: Object.keys(pkg.peerDependencies)
 }
