@@ -1,7 +1,7 @@
-import React, { useState, useRef } from 'react';
-import ActionButton from './button.js';
-import { BoldIcon, ItalicIcon, UnderlineIcon, StrikethroughIcon, IconOrderedList, IconUnorderedList, IconJustifyLeft, IconJustifyCenter, IconJustifyRight, IconQuote, IconLink, IconImage, IconEdit, IconCode } from './icons.js';
-import './styles.css';
+import React, { useState, useRef } from "react";
+import ActionButton from "./button.js";
+import { BoldIcon, ItalicIcon, UnderlineIcon, StrikethroughIcon, IconOrderedList, IconUnorderedList, IconJustifyLeft, IconJustifyCenter, IconJustifyRight, IconQuote, IconLink, IconImage, IconEdit, IconCode } from "./icons.js";
+import "./styles.css";
 
 const Editor = ({ field, html, saveCallback, placeholder }) => {
 	const [htmlEditor, setHtmlEditor] = useState(false);
@@ -9,14 +9,14 @@ const Editor = ({ field, html, saveCallback, placeholder }) => {
 
 	const generateLink = (url) => {
 		const pattern = /^((http|https|ftp):\/\/)/;
-		return !pattern.test(url) ? `https://${url}` : url
-	}
+		return !pattern.test(url) ? `https://${url}` : url;
+	};
 
 	const handlePaste = (event) => {
 		event.preventDefault();
-		const text = event.clipboardData.getData('text/plain');
-		document.execCommand('insertHTML', false, text);
-	}
+		const text = event.clipboardData.getData("text/plain");
+		document.execCommand("insertHTML", false, text);
+	};
 
 	const handleSave = (event) => {
 		const initialHtml = html;
@@ -29,7 +29,7 @@ const Editor = ({ field, html, saveCallback, placeholder }) => {
 			});
 			saveCallback(newEvent);
 		}
-	}
+	};
 
 	return (
 		<div className="editable-wrapper">
@@ -50,10 +50,10 @@ const Editor = ({ field, html, saveCallback, placeholder }) => {
 
 				<ActionButton icon={IconLink} func={() => {
 					const linkUrl = prompt("Enter the URL");
-					var selection = document.getSelection();
+					const selection = document.getSelection();
 					document.execCommand("createLink", false, generateLink(linkUrl));
-					selection.anchorNode.parentElement.target = '_blank';
-					selection.anchorNode.parentElement.rel = 'noopener';
+					selection.anchorNode.parentElement.target = "_blank";
+					selection.anchorNode.parentElement.rel = "noopener";
 				}} />
 
 				<ActionButton icon={IconImage} func={() => {
@@ -78,15 +78,15 @@ const Editor = ({ field, html, saveCallback, placeholder }) => {
 				<div
 					ref={editorRef}
 					className="editable-editor"
-					dangerouslySetInnerHTML={{__html: html}}
+					dangerouslySetInnerHTML={{ __html: html }}
 					contentEditable={true}
-					placeholder={placeholder ? placeholder : 'Write your rich text here'}
+					placeholder={placeholder ? placeholder : "Write your rich text here"}
 					onBlur={handleSave}
 					onPaste={handlePaste}
 				/>
 			)}
 		</div>
 	);
-}
+};
 
 export default Editor;
