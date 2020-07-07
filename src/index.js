@@ -1,11 +1,11 @@
-import React, { useState, useRef } from "react";
-import ActionButton from "./button.js";
+import React, { useState, useRef } from 'react';
+import ActionButton from "./button.js"
 import { BoldIcon, ItalicIcon, UnderlineIcon, StrikethroughIcon, IconOrderedList, IconUnorderedList, IconJustifyLeft, IconJustifyCenter, IconJustifyRight, IconQuote, IconLink, IconImage, IconEdit, IconCode } from "./icons.js";
-import "./styles.css";
+import "./styles.css"
 
 const Editor = ({ field, html, saveCallback, placeholder }) => {
 	const [htmlEditor, setHtmlEditor] = useState(false);
-	const editorRef = useRef();
+	const editorRef = useRef()
 
 	const generateLink = (url) => {
 		const pattern = /^((http|https|ftp):\/\/)/;
@@ -89,4 +89,4 @@ const Editor = ({ field, html, saveCallback, placeholder }) => {
 	);
 };
 
-export default Editor;
+export default Editor
