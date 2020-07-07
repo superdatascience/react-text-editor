@@ -6,7 +6,9 @@
 	"scripts": {
 		"build": "rollup -c",
 		"start": "rollup -c -w",
-		"storybook": "start-storybook"
+		"storybook": "start-storybook",
+		"lint": "npx eslint src/**",
+		"lint:fix": "npx eslint src/** --fix"
 	},
 	"keywords": [
 		"react",
@@ -27,6 +29,11 @@
 		"@rollup/plugin-node-resolve": "^8.1.0",
 		"@storybook/react": "^5.3.19",
 		"babel-loader": "^8.1.0",
+		"eslint": "^7.4.0",
+		"eslint-config-standard": "^14.1.1",
+		"eslint-plugin-import": "^2.22.0",
+		"eslint-plugin-promise": "^4.2.1",
+		"eslint-plugin-standard": "^4.0.1",
 		"react": "^16.13.1",
 		"react-dom": "^16.13.1",
 		"rollup": "^2.19.0",
