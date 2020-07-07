@@ -7,7 +7,7 @@
 		"build": "rollup -c",
 		"start": "rollup -c -w",
 		"storybook": "start-storybook",
-		"eslint-review": "npx src/** eslint",
+		"eslint-review": "npx eslint src/**",
 		"eslint-fix": "npx eslint src/** --fix"
 	},
 	"keywords": [
