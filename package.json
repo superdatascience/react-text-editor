@@ -1,12 +1,13 @@
 {
 	"name": "@superdatascience/react-text-editor",
-	"version": "1.0.0",
+	"version": "1.0.2",
 	"description": "Text editor",
 	"main": "dist/index.cjs.js",
 	"module": "dist/index.esm.js",
 	"scripts": {
 		"build": "npm run clean && rollup -c",
 		"start": "rollup -c -w",
+		"publish": "npm publish --access public",
 		"storybook": "start-storybook",
 		"clean": "rimraf dist",
 		"lint": "npx eslint src/**/*.js",
