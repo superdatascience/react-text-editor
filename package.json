@@ -13,6 +13,7 @@
 		"lint": "npx eslint src/**/*.js",
 		"lint:fix": "npx eslint src/** --fix"
 	},
+	"typings": "typings/index.d.ts",
 	"keywords": [
 		"react",
 		"editor"
@@ -45,6 +46,7 @@
 		"rollup-plugin-terser": "^6.1.0"
 	},
 	"files": [
-		"dist"
+		"dist",
+		"typings/**/**"
 	]
 }
